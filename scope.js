@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
-
 let totalRequest = 0;
 let students = [];
-
 app.get('/students', (req, res) => {
     totalRequest++;
     let message = "Students fetched";
@@ -14,7 +12,6 @@ app.get('/students', (req, res) => {
         students
     });
 });
-
 app.post('/students', (req, res) => {
     totalRequest++;
     const { name, age, year } = req.body;
@@ -29,8 +26,6 @@ app.post('/students', (req, res) => {
         student: newStudent
     });
 });
-
-
 app.get('/status', (req, res) => {
     totalRequest++;
     if (totalRequest > 5) {
@@ -41,11 +36,9 @@ app.get('/status', (req, res) => {
         res.json({ status });
     }
 });
-
 app.get('/stats', (req, res) => {
     res.json({ totalRequest });
 });
-
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
