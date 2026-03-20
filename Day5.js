@@ -2,12 +2,14 @@
 
 const express =require('express');
 const app = express();
+
 app.use(express.json());
 let user={
     name:"Prithiii",
     id: 12345,
     age:20
 }
+
 app.get('/user',(req,res)=>{
     res.json({
         message :"Available user data",
