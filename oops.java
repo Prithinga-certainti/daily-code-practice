@@ -90,3 +90,54 @@ class main{
 // private: accessible only within the class
 // protected: accessible within the package and subclasses
 // default: accessible within the package
+
+
+class Example {
+
+    public int publicVar = 1;
+    private int privateVar = 2;
+    protected int protectedVar = 3;
+    int defaultVar = 4;
+
+    public void showValues() {
+        System.out.println("Public: " + publicVar);
+        System.out.println("Private: " + privateVar);
+        System.out.println("Protected: " + protectedVar);
+        System.out.println("Default: " + defaultVar);
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Example obj = new Example();
+
+        System.out.println(obj.publicVar);     
+        System.out.println(obj.privateVar); // Not accessible
+        System.out.println(obj.protectedVar);  
+        System.out.println(obj.defaultVar);    
+    }
+}
+
+class Example {
+    private int secret = 100;
+    public int getSecret() {
+        return secret; //private
+    }
+}
+
+// constructor
+class Student {
+    String name;
+    int age;
+
+    
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
