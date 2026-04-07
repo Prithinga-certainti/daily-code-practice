@@ -4,7 +4,7 @@ app.use(express.json());
 
 let users = [
     { id: 1, name: "Prithiii" },
-    { id: 2, name: "John" }
+    { id: 2, name: "Vel" }
 ];
 
 function getAllUsers() {
