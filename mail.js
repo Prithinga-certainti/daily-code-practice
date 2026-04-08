@@ -16,7 +16,6 @@ const validateUser = (name, age) => {
 
 const createUser = (name, age) => {
     return {
-        id: id,
         name: name,
         age: age
     };
@@ -35,6 +34,7 @@ app.post('/user', (req, res) => {
             message: "User created successfully",
             data: user
         });
+
     } catch (error) {
         res.status(400).json({
             success: false,
